@@ -5,6 +5,15 @@ This repository implements a tool to verify that patches are assured up to trace
 
 The goal is to prove that security patches applied to binaries only remove bad behaviors, or otherwise characterize them precisely for the developer of the patch. The verifier supports PowerPC and AArch32 binaries (currently requiring statically linked ELF binaries).
 
+Fork experiment: firmware observation models
+-------------------------------------------
+
+This branch includes a `reproducible MMIO observation audit <experiments/mmio-observation/README.md>`_.
+It compares ordinary-memory and explicit read-to-clear models using an independent
+reference, compiled C and PowerPC execution, and PATE verification. The experiment
+documents its device assumptions and preserves commands, binary hashes, and actual
+results. PATE's verifier and observation facilities remain upstream contributions.
+
 Quick Start
 -----------
 

@@ -1,0 +1,11 @@
+ppc32
+  equivalence
+    tests/ppc32/const-global
+      original-self: OK (8.69s)
+      patched-self:  OK (8.52s)
+      equivalence:   OK (12.32s)
+  inequivalence
+    tests/ppc32/unequal/const-global
+      equivalence:   OK (13.09s)
+
+All 4 tests passed (13.09s)

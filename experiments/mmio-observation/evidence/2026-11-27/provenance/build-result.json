@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "exit_code": 0,
+  "completed_at_utc": "2026-11-27T15:29:18.580893+00:00",
+  "command": [
+    "cabal",
+    "build",
+    "exe:pate",
+    "test:pate-test-ppc32",
+    "--enable-tests",
+    "--disable-optimization",
+    "-j3"
+  ],
+  "binary_path": "/workspace/scratch/9ff119dca88a/pate/dist-newstyle/build/x86_64-linux/ghc-9.6.2/pate-0.9.0/x/pate/noopt/build/pate/pate",
+  "binary_sha256": "1061512d84bb4dc857ba1c72a416d9da45fb738e0c70edb312837f519fc6bd87",
+  "binary_size_bytes": 310472096,
+  "cli_help_exit_code": 0,
+  "tracked_source_diff_empty": true,
+  "submodule_tracked_diffs_empty": true,
+  "build_log_sha256": "6cd7c0b127ec6bee3f1b619f88d40b8632a6a0ce371b999244bceeda5a5fdc32",
+  "freeze_sha256": "760bde9f0c64049c01fae2d6d3b63281c2134a11c675fa8eb7e4b03473878729",
+  "project_sha256": "1fc863c50ed1c0188c99c34cbe6b6d857d427262fd7c407183ffc5759aa74b5e",
+  "upstream_base_commit": "284879d8bb3865e0f96e430995b944af2fbf21a0",
+  "source_changes_for_build": [],
+  "environment_fix": "Installed task-local Debian binutils-gold/binutils-gold-x86-64-linux-gnu 2.44-2 after initial missing-gold error; resumed unchanged build."
+}

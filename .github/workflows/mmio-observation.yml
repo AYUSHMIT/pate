@@ -1,0 +1,88 @@
+name: MMIO observation audit
+
+on:
+  push:
+    branches: [research/mmio-observation-audit]
+    paths:
+      - experiments/mmio-observation/**
+      - .github/workflows/mmio-observation.yml
+  pull_request:
+    branches: [master]
+    paths:
+      - experiments/mmio-observation/**
+      - .github/workflows/mmio-observation.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mmio-observation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Initialize pinned submodules
+        run: |
+          git -c 'url.https://github.com/.insteadOf=git@github.com:' submodule update --init --jobs 4
+          cp cabal.project.dist cabal.project
+          cp cabal.GHC-9.6.2.freeze cabal.project.freeze
+      - name: Install native and PowerPC dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential binutils binutils-gold libgmp-dev zlib1g-dev libtinfo-dev \
+            gcc-powerpc-linux-gnu binutils-powerpc-linux-gnu qemu-user
+      - uses: haskell-actions/setup@v2
+        id: haskell
+        with:
+          ghc-version: '9.6.2'
+          cabal-version: '3.10.2.0'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ${{ steps.haskell.outputs.cabal-store }}
+            dist-newstyle
+          key: mmio-${{ runner.os }}-ghc9.6.2-noopt-${{ hashFiles('cabal.GHC-9.6.2.freeze', '.gitmodules') }}
+      - name: Install pinned Yices
+        run: |
+          curl --fail --location --retry 3 \
+            https://yices.csl.sri.com/releases/2.6.2/yices-2.6.2-x86_64-pc-linux-gnu-static-gmp.tar.gz \
+            --output "$RUNNER_TEMP/yices.tar.gz"
+          printf '%s  %s\n' '26cd7dc9bf4c7a1957fa9bd8a205a8194c4759e1b29f6692186af72be8b281d1' \
+            "$RUNNER_TEMP/yices.tar.gz" | sha256sum --check --strict
+          tar -xzf "$RUNNER_TEMP/yices.tar.gz" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/yices-2.6.2/bin" >> "$GITHUB_PATH"
+      - name: Test reference and result handling
+        run: python3 -m unittest discover -s experiments/mmio-observation/tests -v
+      - name: Build and inspect PowerPC fixtures
+        run: python3 experiments/mmio-observation/build.py
+      - name: Check native and emulated execution
+        run: python3 experiments/mmio-observation/run.py --output experiments/mmio-observation/results/execution
+      - name: Build pinned PATE
+        run: |
+          cabal update
+          cabal build exe:pate test:pate-test-ppc32 --enable-tests --disable-optimization -j2 2>&1 | tee pate-build.log
+      - name: Reproduce upstream baseline tests
+        run: |
+          cabal test pate-test-ppc32 --disable-optimization --test-show-details=direct \
+            --test-options='-p const-global -t 300s' 2>&1 | tee pate-baseline.log
+      - name: Run observation audit through PATE
+        run: |
+          pate_binary=$(cabal list-bin exe:pate --disable-optimization)
+          python3 experiments/mmio-observation/run.py --pate "$pate_binary" \
+            --output experiments/mmio-observation/results/verification
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mmio-observation-${{ github.sha }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            experiments/mmio-observation/build/
+            experiments/mmio-observation/results/
+            pate-build.log
+            pate-baseline.log

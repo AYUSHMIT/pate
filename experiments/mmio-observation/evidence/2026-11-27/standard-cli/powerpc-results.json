@@ -1,0 +1,642 @@
+[
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s0-original.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "ram",
+    "optimization": 0,
+    "passed": true,
+    "path": "ram-o0-s0-original.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "8a50af863b18d9fff617f9e93f83c508c0c0af3a48c22acc915c149fee8db32d",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "original"
+  },
+  {
+    "actual_final_state": 1,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s1-original.elf"
+    ],
+    "expected_final_state": 1,
+    "expected_output": 1,
+    "model": "ram",
+    "optimization": 0,
+    "passed": true,
+    "path": "ram-o0-s1-original.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "f16f6d17086ca08cd3c4b7e4a86b1f054520810519bd83af75af1b0a1b69b0e7",
+    "stderr": "",
+    "stdout_hex": "0000000100000001",
+    "variant": "original"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s0-equivalent.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "ram",
+    "optimization": 0,
+    "passed": true,
+    "path": "ram-o0-s0-equivalent.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "96c15f6b392026b8d4a189801e7995746c4db0e5706178c76f8bb323e84bcba2",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "equivalent"
+  },
+  {
+    "actual_final_state": 1,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s1-equivalent.elf"
+    ],
+    "expected_final_state": 1,
+    "expected_output": 1,
+    "model": "ram",
+    "optimization": 0,
+    "passed": true,
+    "path": "ram-o0-s1-equivalent.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "8df1fe2de6e2b226d8132d8ddfe106d95ece110f319b9ca581be11d319e23b08",
+    "stderr": "",
+    "stdout_hex": "0000000100000001",
+    "variant": "equivalent"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s0-second_read.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "ram",
+    "optimization": 0,
+    "passed": true,
+    "path": "ram-o0-s0-second_read.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "14457cfe381df1215667382fa1ef1049fa92d06bca89c7f0cad935cc0c630251",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "second_read"
+  },
+  {
+    "actual_final_state": 1,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s1-second_read.elf"
+    ],
+    "expected_final_state": 1,
+    "expected_output": 1,
+    "model": "ram",
+    "optimization": 0,
+    "passed": true,
+    "path": "ram-o0-s1-second_read.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "e5b1920ad66adb07da19496ecade2fd79de4d86984606342521bc519799bb922",
+    "stderr": "",
+    "stdout_hex": "0000000100000001",
+    "variant": "second_read"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s0-xor1.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 1,
+    "model": "ram",
+    "optimization": 0,
+    "passed": true,
+    "path": "ram-o0-s0-xor1.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "15c1a967118e11106296c18483bbdb46adb826fbba2518b8a62c5916df2fd397",
+    "stderr": "",
+    "stdout_hex": "0000000100000000",
+    "variant": "xor1"
+  },
+  {
+    "actual_final_state": 1,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s1-xor1.elf"
+    ],
+    "expected_final_state": 1,
+    "expected_output": 0,
+    "model": "ram",
+    "optimization": 0,
+    "passed": true,
+    "path": "ram-o0-s1-xor1.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "f43f5aae378f8f2a34ee46cb35a431c0bc2603810691061ab6bf74d13c6b1d99",
+    "stderr": "",
+    "stdout_hex": "0000000000000001",
+    "variant": "xor1"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s0-original.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "ram",
+    "optimization": 2,
+    "passed": true,
+    "path": "ram-o2-s0-original.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "c15e169bbca5a8f4c291bde8c259dde4183934e38bb44e5dd7451fcaf9e308d1",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "original"
+  },
+  {
+    "actual_final_state": 1,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s1-original.elf"
+    ],
+    "expected_final_state": 1,
+    "expected_output": 1,
+    "model": "ram",
+    "optimization": 2,
+    "passed": true,
+    "path": "ram-o2-s1-original.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "8cece1924353f295918e078363a1d5b85ed44c815eb0aa62b4cde9d3b3b13fcc",
+    "stderr": "",
+    "stdout_hex": "0000000100000001",
+    "variant": "original"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s0-equivalent.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "ram",
+    "optimization": 2,
+    "passed": true,
+    "path": "ram-o2-s0-equivalent.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "35d3a24557e6e83e1951d06bb1748d4b70c9924caed239a9b0bdcc1d36d3bf29",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "equivalent"
+  },
+  {
+    "actual_final_state": 1,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s1-equivalent.elf"
+    ],
+    "expected_final_state": 1,
+    "expected_output": 1,
+    "model": "ram",
+    "optimization": 2,
+    "passed": true,
+    "path": "ram-o2-s1-equivalent.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "2c10399daad1b79c9e7a931bee2bfea13f90fa51f8ca56ff3f62c4bb9cf565d2",
+    "stderr": "",
+    "stdout_hex": "0000000100000001",
+    "variant": "equivalent"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s0-second_read.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "ram",
+    "optimization": 2,
+    "passed": true,
+    "path": "ram-o2-s0-second_read.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "c76027a6c99eb36991626c317bdc662cd33ec47051553990490f202a688b18eb",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "second_read"
+  },
+  {
+    "actual_final_state": 1,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s1-second_read.elf"
+    ],
+    "expected_final_state": 1,
+    "expected_output": 1,
+    "model": "ram",
+    "optimization": 2,
+    "passed": true,
+    "path": "ram-o2-s1-second_read.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "6bfcd435f01630837bc970a730dea86eb41ea1427969a2d49ec742dcbbd00eb8",
+    "stderr": "",
+    "stdout_hex": "0000000100000001",
+    "variant": "second_read"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s0-xor1.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 1,
+    "model": "ram",
+    "optimization": 2,
+    "passed": true,
+    "path": "ram-o2-s0-xor1.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "e2f554e3eb194ba14b1896ca95e545629e0d0034c612739fe1d9982649555ee2",
+    "stderr": "",
+    "stdout_hex": "0000000100000000",
+    "variant": "xor1"
+  },
+  {
+    "actual_final_state": 1,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s1-xor1.elf"
+    ],
+    "expected_final_state": 1,
+    "expected_output": 0,
+    "model": "ram",
+    "optimization": 2,
+    "passed": true,
+    "path": "ram-o2-s1-xor1.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "b44c018e190c9d5669291e938648d3bcbb29d73e7bd8b02d0c4ee3d3c506577f",
+    "stderr": "",
+    "stdout_hex": "0000000000000001",
+    "variant": "xor1"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s0-original.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "read_to_clear",
+    "optimization": 0,
+    "passed": true,
+    "path": "read_to_clear-o0-s0-original.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "48d54b2f1cc795121fc60328f30b82e82b31194fa0f1831da978c02c40a0d727",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "original"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s1-original.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 1,
+    "model": "read_to_clear",
+    "optimization": 0,
+    "passed": true,
+    "path": "read_to_clear-o0-s1-original.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "b8dd5d3ba02dfde06b8a30c853cb35c31edfc51aa343e72a1b7bc991e90dfb75",
+    "stderr": "",
+    "stdout_hex": "0000000100000000",
+    "variant": "original"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s0-equivalent.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "read_to_clear",
+    "optimization": 0,
+    "passed": true,
+    "path": "read_to_clear-o0-s0-equivalent.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "609e1eed88932cce1a7d9a8515ee9ba4406c4d0fa3766254cf400986bf456b10",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "equivalent"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s1-equivalent.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 1,
+    "model": "read_to_clear",
+    "optimization": 0,
+    "passed": true,
+    "path": "read_to_clear-o0-s1-equivalent.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "0fd17bc1f90dc26f8962e522a5fdbcc3ce82acf049b79b7fec51d98245eb72d2",
+    "stderr": "",
+    "stdout_hex": "0000000100000000",
+    "variant": "equivalent"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s0-second_read.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "read_to_clear",
+    "optimization": 0,
+    "passed": true,
+    "path": "read_to_clear-o0-s0-second_read.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "194a1f8f38a45072ffe22bf29fffb6420cca884f5b74a2dba46d13fba752941f",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "second_read"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s1-second_read.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "read_to_clear",
+    "optimization": 0,
+    "passed": true,
+    "path": "read_to_clear-o0-s1-second_read.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "f79a74fe135fb6ee0eb4fc3ee5ee07ecc9bd4666956696272b631c870bb4aaf8",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "second_read"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s0-xor1.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 1,
+    "model": "read_to_clear",
+    "optimization": 0,
+    "passed": true,
+    "path": "read_to_clear-o0-s0-xor1.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "9df5cf2d1c5f0f4f1037d409e6dca183270926390f7c78c32b2723db8646a895",
+    "stderr": "",
+    "stdout_hex": "0000000100000000",
+    "variant": "xor1"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s1-xor1.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "read_to_clear",
+    "optimization": 0,
+    "passed": true,
+    "path": "read_to_clear-o0-s1-xor1.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "08df473713c3d39ad471457093d75b1951ffdd99cb5ba41fccef3d85023999fa",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "xor1"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s0-original.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "read_to_clear",
+    "optimization": 2,
+    "passed": true,
+    "path": "read_to_clear-o2-s0-original.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "4f7d19f96f43479fc4de10116186147a0ca7a8a0c2cb44fd52008d0b53adb7ab",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "original"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s1-original.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 1,
+    "model": "read_to_clear",
+    "optimization": 2,
+    "passed": true,
+    "path": "read_to_clear-o2-s1-original.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "0c88a1b98af72dd5b3210cc94cb7f8aea6ef3eb0746c5e824e4549fd3f05a0e7",
+    "stderr": "",
+    "stdout_hex": "0000000100000000",
+    "variant": "original"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s0-equivalent.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "read_to_clear",
+    "optimization": 2,
+    "passed": true,
+    "path": "read_to_clear-o2-s0-equivalent.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "4063382a70c9d7bc4df0d532c6bf4113667eab204a0f7993b704606e8526d721",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "equivalent"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s1-equivalent.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 1,
+    "model": "read_to_clear",
+    "optimization": 2,
+    "passed": true,
+    "path": "read_to_clear-o2-s1-equivalent.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "61ba4c3dc3350070d14cd3e8b673a4633e42cf6841bf5e47fb30518e634430ac",
+    "stderr": "",
+    "stdout_hex": "0000000100000000",
+    "variant": "equivalent"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s0-second_read.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "read_to_clear",
+    "optimization": 2,
+    "passed": true,
+    "path": "read_to_clear-o2-s0-second_read.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "353971916f259fa562238da3659430acf8e2f9a952eb4a12854a9b776fb39feb",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "second_read"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s1-second_read.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "read_to_clear",
+    "optimization": 2,
+    "passed": true,
+    "path": "read_to_clear-o2-s1-second_read.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "58d2bc5d34d3ac2e93d368eca39b1fce2de42bf9d69e5657387278595db75f04",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "second_read"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 1,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s0-xor1.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 1,
+    "model": "read_to_clear",
+    "optimization": 2,
+    "passed": true,
+    "path": "read_to_clear-o2-s0-xor1.elf",
+    "returncode": 0,
+    "seed": 0,
+    "sha256": "06ead987e0ba04579b042f2be7d2a77d26361745771185d2dc902ec7da0e9561",
+    "stderr": "",
+    "stdout_hex": "0000000100000000",
+    "variant": "xor1"
+  },
+  {
+    "actual_final_state": 0,
+    "actual_output": 0,
+    "command": [
+      "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s1-xor1.elf"
+    ],
+    "expected_final_state": 0,
+    "expected_output": 0,
+    "model": "read_to_clear",
+    "optimization": 2,
+    "passed": true,
+    "path": "read_to_clear-o2-s1-xor1.elf",
+    "returncode": 0,
+    "seed": 1,
+    "sha256": "16cb8d0578ae4f33a841389f371a76ab5cb4f1b4035e8ca089cecbf041711f85",
+    "stderr": "",
+    "stdout_hex": "0000000000000000",
+    "variant": "xor1"
+  }
+]
