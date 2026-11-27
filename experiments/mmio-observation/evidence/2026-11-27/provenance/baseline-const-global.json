@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/workspace/scratch/9ff119dca88a/pate/dist-newstyle/build/x86_64-linux/ghc-9.6.2/pate-0.9.0/t/pate-test-ppc32/noopt/build/pate-test-ppc32/pate-test-ppc32",
+    "-p",
+    "const-global",
+    "-t",
+    "300s"
+  ],
+  "exit_code": 0,
+  "timeout": false,
+  "elapsed_seconds": 13.127,
+  "binary_sha256": "d81cc8a811b5b2c434248f210fced9bc36d745963662de11d08301981f008564",
+  "summary_verified": true,
+  "passed_tests": 4,
+  "stdout_stderr_sha256": "76b1fe177c82f710f1a9a79ac3f0d06af5b5c8ae832ab809e591e46186554787"
+}

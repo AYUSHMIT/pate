@@ -1,0 +1,404 @@
+Resolving dependencies...
+Build profile: -w ghc-9.6.2 -O0
+In order, the following will be built (use -v for more details):
+ - BoundedChan-1.0.3.0 (lib:BoundedChan) (requires download & build)
+ - IntervalMap-0.6.2.1 (lib) (requires download & build)
+ - OneTuple-0.4.1.1 (lib) (requires download & build)
+ - Only-0.1 (lib) (requires download & build)
+ - SHA-1.6.4.4 (lib) (requires download & build)
+ - StateVar-1.2.2 (lib) (requires download & build)
+ - alex-3.5.1.0 (exe:alex) (requires download & build)
+ - attoparsec-0.14.4 (lib:attoparsec-internal) (requires download & build)
+ - base-compat-0.13.1 (lib) (requires download & build)
+ - base-orphans-0.9.1 (lib) (requires download & build)
+ - base64-bytestring-1.2.1.0 (lib) (requires download & build)
+ - bimap-0.5.0 (lib) (requires download & build)
+ - bitwise-1.0.0.1 (lib) (requires download & build)
+ - blaze-builder-0.4.2.3 (lib) (requires download & build)
+ - bytestring-builder-0.10.8.2.0 (lib) (requires download & build)
+ - call-stack-0.4.0 (lib) (requires download & build)
+ - cereal-0.5.8.3 (lib) (requires download & build)
+ - clock-0.8.4 (lib) (requires download & build)
+ - colour-2.3.6 (lib) (requires download & build)
+ - data-default-class-0.1.2.0 (lib:data-default-class) (requires download & build)
+ - dlist-1.0 (lib) (requires download & build)
+ - entropy-0.4.1.10 (lib:entropy) (requires download & build)
+ - fgl-5.8.2.0 (lib) (requires download & build)
+ - file-embed-0.0.15.0 (lib) (requires download & build)
+ - fingertree-0.1.5.0 (lib) (requires download & build)
+ - finite-typelits-0.1.6.0 (lib) (requires download & build)
+ - galois-dwarf-0.2.2 (lib) (first run)
+ - generically-0.1.1 (lib) (requires download & build)
+ - happy-1.20.1.1 (exe:happy) (requires download & build)
+ - hashable-1.4.3.0 (lib) (requires download & build)
+ - hsc2hs-0.68.10 (exe:hsc2hs) (requires download & build)
+ - ilist-0.4.0.1 (lib) (requires download & build)
+ - indexed-traversable-0.1.3 (lib) (requires download & build)
+ - integer-logarithms-1.0.3.1 (lib) (requires download & build)
+ - located-base-0.1.1.1 (lib) (requires download & build)
+ - microlens-0.4.13.1 (lib) (requires download & build)
+ - monadLib-3.10.1 (lib) (requires download & build)
+ - monadplus-1.4.3 (lib) (requires download & build)
+ - old-locale-1.0.0.7 (lib) (requires download & build)
+ - ordered-containers-0.2.3 (lib) (requires download & build)
+ - parallel-3.2.2.0 (lib) (requires download & build)
+ - parser-combinators-1.3.0 (lib) (requires download & build)
+ - prettyprinter-1.7.1 (lib) (requires download & build)
+ - primitive-0.8.0.0 (lib) (requires download & build)
+ - readable-0.3.1 (lib) (requires download & build)
+ - reflection-2.1.7 (lib) (requires download & build)
+ - regex-base-0.94.0.2 (lib) (requires download & build)
+ - s-cargot-0.1.6.0 (lib) (requires download & build)
+ - safe-0.3.21 (lib) (requires download & build)
+ - safe-exceptions-0.1.7.4 (lib) (requires download & build)
+ - selective-0.7 (lib) (requires download & build)
+ - semigroups-0.20 (lib) (requires download & build)
+ - split-0.2.5 (lib) (requires download & build)
+ - splitmix-0.1.0.5 (lib) (requires download & build)
+ - syb-0.7.2.4 (lib) (requires download & build)
+ - tagged-0.8.8 (lib) (requires download & build)
+ - th-abstraction-0.5.0.0 (lib) (requires download & build)
+ - th-compat-0.1.4 (lib) (requires download & build)
+ - transformers-compat-0.7.2 (lib) (requires download & build)
+ - type-equality-1 (lib) (requires download & build)
+ - unbounded-delays-0.1.1.1 (lib) (requires download & build)
+ - unix-compat-0.7.1 (lib) (requires download & build)
+ - unliftio-core-0.2.1.0 (lib) (requires download & build)
+ - utf8-string-1.0.2 (lib) (requires download & build)
+ - void-0.7.3 (lib) (requires download & build)
+ - xml-1.3.14 (lib:xml) (requires download & build)
+ - zenc-0.1.2 (lib) (requires download & build)
+ - zlib-0.6.3.0 (lib) (requires download & build)
+ - indexed-list-literals-0.2.1.3 (lib) (requires download & build)
+ - contravariant-1.5.5 (lib) (requires download & build)
+ - gitrev-1.3.1 (lib) (requires download & build)
+ - base-compat-batteries-0.13.1 (lib) (requires download & build)
+ - HUnit-1.6.2.0 (lib) (requires download & build)
+ - extra-1.7.14 (lib) (requires download & build)
+ - ansi-terminal-types-0.11.5 (lib) (requires download & build)
+ - data-default-instances-containers-0.0.1 (lib:data-default-instances-containers) (requires download & build)
+ - data-default-instances-dlist-0.0.1 (lib:data-default-instances-dlist) (requires download & build)
+ - language-c-0.9.3 (lib) (requires download & build)
+ - config-value-0.8.3 (lib) (requires download & build)
+ - unordered-containers-0.2.20 (lib) (requires download & build)
+ - time-compat-1.9.6.1 (lib) (requires download & build)
+ - text-short-0.1.5 (lib) (requires download & build)
+ - data-fix-0.3.2 (lib) (requires download & build)
+ - case-insensitive-1.2.1.0 (lib) (requires download & build)
+ - binary-symbols-0.1.4 (lib) (first run)
+ - async-2.2.5 (lib) (requires download & build)
+ - network-3.1.4.0 (lib:network) (requires download & build)
+ - libBF-0.6.7 (lib) (requires download & build)
+ - data-default-instances-old-locale-0.0.1 (lib:data-default-instances-old-locale) (requires download & build)
+ - vector-0.12.3.1 (lib) (requires download & build)
+ - scientific-0.3.7.0 (lib) (requires download & build)
+ - regex-tdfa-1.3.2.2 (lib) (requires download & build)
+ - regex-posix-0.96.0.1 (lib) (requires download & build)
+ - s-cargot-letbind-0.2.4.0 (lib) (requires download & build)
+ - asl-parser-0.1.0.0 (lib) (first run)
+ - validation-selective-0.2.0.0 (lib) (requires download & build)
+ - random-1.2.1.2 (lib) (requires download & build)
+ - json-0.11 (lib) (requires download & build)
+ - distributive-0.6.2.1 (lib) (requires download & build)
+ - assoc-1.1 (lib) (requires download & build)
+ - th-lift-0.8.4 (lib) (requires download & build)
+ - th-expand-syns-0.4.11.0 (lib) (requires download & build)
+ - sayable-1.2.4.0 (lib) (requires download & build)
+ - microlens-th-0.4.3.14 (lib) (requires download & build)
+ - boomerang-1.4.9.1 (lib) (requires download & build)
+ - network-uri-2.6.4.2 (lib) (requires download & build)
+ - transformers-base-0.4.6 (lib) (requires download & build)
+ - deriving-compat-0.6.5 (lib) (requires download & build)
+ - constraints-0.13.4 (lib) (requires download & build)
+ - concurrent-extra-0.7.0.12 (lib) (requires download & build)
+ - filemanip-0.3.6.3 (lib:filemanip) (requires download & build)
+ - zlib-bindings-0.1.1.5 (lib) (requires download & build)
+ - panic-0.4.0.1 (lib) (requires download & build)
+ - ansi-terminal-1.0 (lib) (requires download & build)
+ - vault-0.3.1.5 (lib) (requires download & build)
+ - unliftio-0.2.25.0 (lib) (requires download & build)
+ - data-default-0.7.1.1 (lib:data-default) (requires download & build)
+ - math-functions-0.3.4.3 (lib) (requires download & build)
+ - indexed-traversable-instances-0.1.1.2 (lib) (requires download & build)
+ - hashtables-1.3 (lib) (requires download & build)
+ - megaparsec-9.6.1 (lib) (requires download & build)
+ - attoparsec-0.14.4 (lib) (requires download & build)
+ - uuid-types-1.0.5.1 (lib) (requires download & build)
+ - temporary-1.3 (lib) (requires download & build)
+ - streaming-commons-0.2.2.6 (lib) (requires download & build)
+ - QuickCheck-2.14.3 (lib) (requires download & build)
+ - comonad-5.0.8 (lib) (requires download & build)
+ - these-1.2 (lib) (requires download & build)
+ - th-lift-instances-0.1.20 (lib) (requires download & build)
+ - th-reify-many-0.1.10 (lib) (requires download & build)
+ - llvm-pretty-0.11.0 (lib) (first run)
+ - itanium-abi-0.1.2 (lib) (requires download & build)
+ - monad-control-1.0.3.1 (lib) (requires download & build)
+ - prettyprinter-ansi-terminal-1.1.3 (lib) (requires download & build)
+ - mwc-random-0.14.0.0 (lib) (requires download & build)
+ - witherable-0.4.2 (lib) (requires download & build)
+ - versions-6.0.5 (lib) (requires download & build)
+ - tomland-1.3.3.2 (lib) (requires download & build)
+ - io-streams-1.5.2.2 (lib) (requires download & build)
+ - cassava-0.5.3.0 (lib) (requires download & build)
+ - websockets-0.13.0.0 (lib) (requires download & build)
+ - bifunctors-5.6.1 (lib) (requires download & build)
+ - strict-0.5 (lib) (requires download & build)
+ - th-orphans-0.13.14 (lib) (requires download & build)
+ - lifted-base-0.2.3.12 (lib) (requires download & build)
+ - prettyprinter-compat-ansi-wl-pprint-1.0.2 (lib) (requires download & build)
+ - optparse-applicative-0.18.1.0 (lib) (requires download & build)
+ - lumberjack-1.0.3.0 (lib) (requires download & build)
+ - io-streams-haproxy-1.0.1.0 (lib) (requires download & build)
+ - semigroupoids-6.0.0.1 (lib) (requires download & build)
+ - profunctors-5.6.2 (lib) (requires download & build)
+ - th-utilities-0.2.5.0 (lib) (requires download & build)
+ - snap-core-1.0.5.1 (lib) (requires download & build)
+ - ansi-wl-pprint-1.0.2 (lib) (requires download & build)
+ - tasty-1.5 (lib) (requires download & build)
+ - semialign-1.3 (lib) (requires download & build)
+ - invariant-0.6.2 (lib) (requires download & build)
+ - free-5.2 (lib) (requires download & build)
+ - snap-server-1.1.2.1 (lib) (requires download & build)
+ - tasty-hunit-0.10.1 (lib) (requires download & build)
+ - tasty-expected-failure-0.12.3 (lib) (requires download & build)
+ - aeson-2.1.2.1 (lib) (requires download & build)
+ - adjunctions-4.4.2 (lib) (requires download & build)
+ - websockets-snap-0.10.3.1 (lib) (requires download & build)
+ - vector-sized-1.6.1 (lib) (requires download & build)
+ - kan-extensions-5.2.5 (lib) (requires download & build)
+ - threepenny-gui-0.9.4.1 (lib) (requires download & build)
+ - lens-5.2.3 (lib) (requires download & build)
+ - parameterized-utils-2.1.7.0.99 (lib) (first run)
+ - elf-edit-0.40 (lib) (first run)
+ - demangler-1.3.1.0 (lib) (first run)
+ - dismantle-tablegen-0.1.0.0 (lib) (first run)
+ - bv-sized-1.0.5 (lib) (requires download & build)
+ - macaw-base-0.3.15.6 (lib) (first run)
+ - dismantle-ppc-0.1.0.0 (lib) (first run)
+ - dismantle-arm-xml-0.1.0.0 (lib) (first run)
+ - what4-1.5.1.0.99 (lib) (first run)
+ - macaw-loader-0.1.0.0 (lib) (first run)
+ - crucible-0.6 (lib) (first run)
+ - crucible-symio-0.1.0.0 (lib) (first run)
+ - asl-translator-0.1.0.0 (lib) (first run)
+ - crucible-llvm-0.5 (lib) (first run)
+ - semmc-0.1.0.0 (lib) (first run)
+ - macaw-symbolic-0.0.1 (lib) (first run)
+ - semmc-synthesis-0.1.0.0 (lib) (first run)
+ - semmc-ppc-0.1.0.0 (lib) (first run)
+ - pate-0.9.0 (lib) (first run)
+ - macaw-semmc-0.1.0.0 (lib) (first run)
+ - semmc-aarch32-0.1.0.0 (lib) (first run)
+ - macaw-loader-ppc-0.1.0.0 (lib) (first run)
+ - macaw-aarch32-0.1.0.0 (lib) (first run)
+ - macaw-ppc-0.1.0.0 (lib) (first run)
+ - macaw-loader-aarch32-0.1.0.0 (lib) (first run)
+ - macaw-aarch32-symbolic-0.1.0.0 (lib) (first run)
+ - macaw-ppc-symbolic-0.1.0.0 (lib) (first run)
+ - pate-0.9.0 (test:pate-test-ppc32) (first run)
+ - pate-0.9.0 (lib:pate-base) (first run)
+ - pate-0.9.0 (exe:pate) (first run)
+Downloading  base-orphans-0.9.1
+Downloaded   base-orphans-0.9.1
+Downloading  call-stack-0.4.0
+Downloaded   call-stack-0.4.0
+Downloading  clock-0.8.4
+Downloaded   clock-0.8.4
+Downloading  colour-2.3.6
+Downloaded   colour-2.3.6
+Downloading  data-default-class-0.1.2.0
+Downloaded   data-default-class-0.1.2.0
+Downloading  fingertree-0.1.5.0
+Downloaded   fingertree-0.1.5.0
+Downloading  generically-0.1.1
+Downloaded   generically-0.1.1
+Downloading  ilist-0.4.0.1
+Downloaded   ilist-0.4.0.1
+Downloading  located-base-0.1.1.1
+Downloaded   located-base-0.1.1.1
+Downloading  microlens-0.4.13.1
+Downloaded   microlens-0.4.13.1
+Downloading  monadLib-3.10.1
+Downloaded   monadLib-3.10.1
+Downloading  monadplus-1.4.3
+Downloaded   monadplus-1.4.3
+Downloading  old-locale-1.0.0.7
+Downloaded   old-locale-1.0.0.7
+Downloading  data-default-instances-old-locale-0.0.1
+Downloaded   data-default-instances-old-locale-0.0.1
+Downloading  parser-combinators-1.3.0
+Downloaded   parser-combinators-1.3.0
+Downloading  safe-0.3.21
+Downloaded   safe-0.3.21
+Downloading  semigroups-0.20
+Downloaded   semigroups-0.20
+Downloading  split-0.2.5
+Downloaded   split-0.2.5
+Downloading  syb-0.7.2.4
+Downloaded   syb-0.7.2.4
+Downloading  transformers-compat-0.7.2
+Downloaded   transformers-compat-0.7.2
+Downloading  type-equality-1
+Downloaded   type-equality-1
+Downloading  unbounded-delays-0.1.1.1
+Downloaded   unbounded-delays-0.1.1.1
+Downloading  unliftio-core-0.2.1.0
+Downloaded   unliftio-core-0.2.1.0
+Downloading  void-0.7.3
+Downloaded   void-0.7.3
+Downloading  zenc-0.1.2
+Downloaded   zenc-0.1.2
+Downloading  dlist-1.0
+Downloaded   dlist-1.0
+Downloading  data-default-instances-dlist-0.0.1
+Downloaded   data-default-instances-dlist-0.0.1
+Downloading  finite-typelits-0.1.6.0
+Downloaded   finite-typelits-0.1.6.0
+Downloading  base64-bytestring-1.2.1.0
+Downloaded   base64-bytestring-1.2.1.0
+Downloading  bitwise-1.0.0.1
+Downloaded   bitwise-1.0.0.1
+Downloading  bytestring-builder-0.10.8.2.0
+Downloaded   bytestring-builder-0.10.8.2.0
+Downloading  utf8-string-1.0.2
+Downloaded   utf8-string-1.0.2
+Downloading  zlib-0.6.3.0
+Downloaded   zlib-0.6.3.0
+Downloading  zlib-bindings-0.1.1.5
+Downloaded   zlib-bindings-0.1.1.5
+Downloading  cereal-0.5.8.3
+Downloaded   cereal-0.5.8.3
+Downloading  data-default-instances-containers-0.0.1
+Downloaded   data-default-instances-containers-0.0.1
+Downloading  data-default-0.7.1.1
+Downloaded   data-default-0.7.1.1
+Downloading  ordered-containers-0.2.3
+Downloaded   ordered-containers-0.2.3
+Downloading  selective-0.7
+Downloaded   selective-0.7
+Downloading  reflection-2.1.7
+Downloaded   reflection-2.1.7
+Downloading  th-abstraction-0.5.0.0
+Downloaded   th-abstraction-0.5.0.0
+Downloading  deriving-compat-0.6.5
+Downloaded   deriving-compat-0.6.5
+Downloading  microlens-th-0.4.3.14
+Downloaded   microlens-th-0.4.3.14
+Downloading  th-compat-0.1.4
+Downloaded   th-compat-0.1.4
+Downloading  th-expand-syns-0.4.11.0
+Downloaded   th-expand-syns-0.4.11.0
+Downloading  th-lift-0.8.4
+Downloaded   th-lift-0.8.4
+Downloading  th-reify-many-0.1.10
+Downloaded   th-reify-many-0.1.10
+Downloading  th-orphans-0.13.14
+Downloaded   th-orphans-0.13.14
+Downloading  primitive-0.8.0.0
+Downloaded   primitive-0.8.0.0
+Downloading  splitmix-0.1.0.5
+Downloaded   splitmix-0.1.0.5
+Downloading  random-1.2.1.2
+Downloaded   random-1.2.1.2
+Downloading  tagged-0.8.8
+Downloaded   tagged-0.8.8
+Downloading  validation-selective-0.2.0.0
+Downloaded   validation-selective-0.2.0.0
+Downloading  vector-0.12.3.1
+Downloaded   vector-0.12.3.1
+Downloading  unix-compat-0.7.1
+Downloaded   unix-compat-0.7.1
+Downloading  versions-6.0.5
+Downloaded   versions-6.0.5
+Starting     BoundedChan-1.0.3.0 (all, legacy fallback)
+Starting     OneTuple-0.4.1.1 (lib)
+Starting     IntervalMap-0.6.2.1 (lib)
+Building     IntervalMap-0.6.2.1 (lib)
+Building     OneTuple-0.4.1.1 (lib)
+Building     BoundedChan-1.0.3.0 (all, legacy fallback)
+Installing   OneTuple-0.4.1.1 (lib)
+Completed    OneTuple-0.4.1.1 (lib)
+Starting     Only-0.1 (lib)
+Installing   BoundedChan-1.0.3.0 (all, legacy fallback)
+Completed    BoundedChan-1.0.3.0 (all, legacy fallback)
+Starting     SHA-1.6.4.4 (lib)
+Building     Only-0.1 (lib)
+Building     SHA-1.6.4.4 (lib)
+Installing   Only-0.1 (lib)
+Completed    Only-0.1 (lib)
+Starting     StateVar-1.2.2 (lib)
+Building     StateVar-1.2.2 (lib)
+Installing   StateVar-1.2.2 (lib)
+Completed    StateVar-1.2.2 (lib)
+Starting     alex-3.5.1.0 (exe:alex)
+Building     alex-3.5.1.0 (exe:alex)
+Installing   IntervalMap-0.6.2.1 (lib)
+Completed    IntervalMap-0.6.2.1 (lib)
+Starting     attoparsec-0.14.4 (lib:attoparsec-internal)
+Building     attoparsec-0.14.4 (lib:attoparsec-internal)
+Installing   attoparsec-0.14.4 (lib:attoparsec-internal)
+Completed    attoparsec-0.14.4 (lib:attoparsec-internal)
+Starting     base-compat-0.13.1 (lib)
+Building     base-compat-0.13.1 (lib)
+Installing   alex-3.5.1.0 (exe:alex)
+Completed    alex-3.5.1.0 (exe:alex)
+Starting     base-orphans-0.9.1 (lib)
+Installing   base-compat-0.13.1 (lib)
+Completed    base-compat-0.13.1 (lib)
+Starting     base64-bytestring-1.2.1.0 (lib)
+Building     base-orphans-0.9.1 (lib)
+Building     base64-bytestring-1.2.1.0 (lib)
+Installing   base-orphans-0.9.1 (lib)
+Completed    base-orphans-0.9.1 (lib)
+Starting     bimap-0.5.0 (lib)
+Building     bimap-0.5.0 (lib)
+Installing   base64-bytestring-1.2.1.0 (lib)
+Completed    base64-bytestring-1.2.1.0 (lib)
+Starting     bitwise-1.0.0.1 (lib)
+Building     bitwise-1.0.0.1 (lib)
+Installing   bimap-0.5.0 (lib)
+Completed    bimap-0.5.0 (lib)
+Starting     blaze-builder-0.4.2.3 (lib)
+Building     blaze-builder-0.4.2.3 (lib)
+Installing   SHA-1.6.4.4 (lib)
+Completed    SHA-1.6.4.4 (lib)
+Starting     bytestring-builder-0.10.8.2.0 (lib)
+Building     bytestring-builder-0.10.8.2.0 (lib)
+Installing   bytestring-builder-0.10.8.2.0 (lib)
+Completed    bytestring-builder-0.10.8.2.0 (lib)
+Starting     call-stack-0.4.0 (lib)
+Building     call-stack-0.4.0 (lib)
+Installing   call-stack-0.4.0 (lib)
+Installing   blaze-builder-0.4.2.3 (lib)
+Completed    call-stack-0.4.0 (lib)
+Starting     cereal-0.5.8.3 (lib)
+Completed    blaze-builder-0.4.2.3 (lib)
+Starting     clock-0.8.4 (lib)
+Building     cereal-0.5.8.3 (lib)
+Building     clock-0.8.4 (lib)
+Starting     colour-2.3.6 (lib)
+Building     colour-2.3.6 (lib)
+Installing   bitwise-1.0.0.1 (lib)
+Completed    bitwise-1.0.0.1 (lib)
+Installing   colour-2.3.6 (lib)
+Completed    colour-2.3.6 (lib)
+Installing   cereal-0.5.8.3 (lib)
+Completed    cereal-0.5.8.3 (lib)
+
+Failed to build clock-0.8.4.
+Build log (
+/workspace/scratch/9ff119dca88a/toolchain/cabal-home/logs/ghc-9.6.2/clock-0.8.4-4faceb736193c59834ecdeea1311018e03f8c666706c3be6e2af59ff1cb32f39.log
+):
+Configuring library for clock-0.8.4..
+Preprocessing library for clock-0.8.4..
+linking dist/build/System/Clock_hsc_make.o failed (exit code 1)
+rsp file was: "dist/build/System/hsc2hscall2929-2.rsp"
+command was: /usr/bin/gcc dist/build/System/Clock_hsc_make.o dist/build/System/Clock_hsc_utils.o -o dist/build/System/Clock_hsc_make -fuse-ld=gold -L/workspace/scratch/9ff119dca88a/toolchain/ghc-9.6.2/lib/ghc-9.6.2/lib/../lib/x86_64-linux-ghc-9.6.2/base-4.18.0.0 -Wl,-R,/workspace/scratch/9ff119dca88a/toolchain/ghc-9.6.2/lib/ghc-9.6.2/lib/../lib/x86_64-linux-ghc-9.6.2/base-4.18.0.0 -L/workspace/scratch/9ff119dca88a/toolchain/ghc-9.6.2/lib/ghc-9.6.2/lib/../lib/x86_64-linux-ghc-9.6.2/ghc-bignum-1.3 -Wl,-R,/workspace/scratch/9ff119dca88a/toolchain/ghc-9.6.2/lib/ghc-9.6.2/lib/../lib/x86_64-linux-ghc-9.6.2/ghc-bignum-1.3 -lgmp -L/workspace/scratch/9ff119dca88a/toolchain/ghc-9.6.2/lib/ghc-9.6.2/lib/../lib/x86_64-linux-ghc-9.6.2/ghc-prim-0.10.0 -Wl,-R,/workspace/scratch/9ff119dca88a/toolchain/ghc-9.6.2/lib/ghc-9.6.2/lib/../lib/x86_64-linux-ghc-9.6.2/ghc-prim-0.10.0 -lc -lm -L/workspace/scratch/9ff119dca88a/toolchain/ghc-9.6.2/lib/ghc-9.6.2/lib/../lib/x86_64-linux-ghc-9.6.2/rts-1.0.2 -Wl,-R,/workspace/scratch/9ff119dca88a/toolchain/ghc-9.6.2/lib/ghc-9.6.2/lib/../lib/x86_64-linux-ghc-9.6.2/rts-1.0.2 -lc -lm -lrt -ldl -lpthread
+error: collect2: fatal error: cannot find ‘ld’
+compilation terminated.
+
+Error: cabal: Failed to build clock-0.8.4 (which is required by exe:pate from
+pate-0.9.0 and test:pate-test-ppc32 from pate-0.9.0). See the build log above
+for details.
+

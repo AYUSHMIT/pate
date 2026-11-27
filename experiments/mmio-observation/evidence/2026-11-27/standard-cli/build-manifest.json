@@ -1,0 +1,3253 @@
+{
+  "schema_version": 1,
+  "upstream_commit": "284879d8bb3865e0f96e430995b944af2fbf21a0",
+  "checkout_commit": "07816b8719faf0cc2ae7768182b34739f8e72d7d",
+  "tools": {
+    "cc": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+      "version": "powerpc-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0"
+    },
+    "objdump": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-objdump",
+      "version": "GNU objdump (GNU Binutils for Debian) 2.44"
+    },
+    "nm": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-nm",
+      "version": "GNU nm (GNU Binutils for Debian) 2.44"
+    },
+    "readelf": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-readelf",
+      "version": "GNU readelf (GNU Binutils for Debian) 2.44"
+    },
+    "host_cc": {
+      "path": "/usr/bin/x86_64-linux-gnu-gcc-14",
+      "version": "x86_64-linux-gnu-gcc-14 (Debian 14.2.0-19) 14.2.0"
+    }
+  },
+  "sources": {
+    "experiments/mmio-observation/fixtures/device.c": "0e4ed320c4a8d7a21c8a0325886797b91148f313b3b10c1ecac83c01ed1b6e80",
+    "experiments/mmio-observation/fixtures/link.ld": "0073ec8d92ce93385c2320973162eb29a7577cb6825086e5e0ab4c080b0dfc81",
+    "experiments/mmio-observation/fixtures/linux-entry.S": "6d1c367f1f7652cbfb88d58b5cb24c5c49bfaf66bc5877095a13b45ff8991586",
+    "experiments/mmio-observation/build.py": "ed8c87b38dbd5c5677a0f2d95a28f9c8c0855f1ae150450c86cf0ab44cfa0449"
+  },
+  "binaries": [
+    {
+      "model": "ram",
+      "variant": "original",
+      "seed": 0,
+      "optimization": 0,
+      "path": "ram-o0-s0-original.elf",
+      "sha256": "8a50af863b18d9fff617f9e93f83c508c0c0af3a48c22acc915c149fee8db32d",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o0-s0-original.dis",
+      "disassembly_sha256": "e91396bb7d94f322cf9dcecb23d2e308c4627715ac67b4a38fe71ef4f1f63dd9",
+      "elf_header": "ram-o0-s0-original.elf-header.txt",
+      "elf_header_sha256": "2352bd905b661594c652ae2d1ac045219c0b35b3ce2926bbefd516fc95553ec7",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=0",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s0-original.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 26,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435652,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435684,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "original",
+      "seed": 1,
+      "optimization": 0,
+      "path": "ram-o0-s1-original.elf",
+      "sha256": "f16f6d17086ca08cd3c4b7e4a86b1f054520810519bd83af75af1b0a1b69b0e7",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o0-s1-original.dis",
+      "disassembly_sha256": "0899dcba27543ce23ac2471ba3bd9dbec01078257b81ff51b563ba84a0adc608",
+      "elf_header": "ram-o0-s1-original.elf-header.txt",
+      "elf_header_sha256": "2352bd905b661594c652ae2d1ac045219c0b35b3ce2926bbefd516fc95553ec7",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=0",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s1-original.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 26,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435652,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435684,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "equivalent",
+      "seed": 0,
+      "optimization": 0,
+      "path": "ram-o0-s0-equivalent.elf",
+      "sha256": "96c15f6b392026b8d4a189801e7995746c4db0e5706178c76f8bb323e84bcba2",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o0-s0-equivalent.dis",
+      "disassembly_sha256": "b71c45151f2911ff0a10df963d6265ceaf8ecd5ba944ee2f07a0025d7eeb6e13",
+      "elf_header": "ram-o0-s0-equivalent.elf-header.txt",
+      "elf_header_sha256": "693a366d7fa3169b41bb6b14f03606daa61873375c6c64155e98f5958af0299a",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=1",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s0-equivalent.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 30,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435652,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435700,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "equivalent",
+      "seed": 1,
+      "optimization": 0,
+      "path": "ram-o0-s1-equivalent.elf",
+      "sha256": "8df1fe2de6e2b226d8132d8ddfe106d95ece110f319b9ca581be11d319e23b08",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o0-s1-equivalent.dis",
+      "disassembly_sha256": "fcff4cd781e4c086e4f38a6a19f601cea25c6a7a8148c0fd7dde26d52e0b238e",
+      "elf_header": "ram-o0-s1-equivalent.elf-header.txt",
+      "elf_header_sha256": "693a366d7fa3169b41bb6b14f03606daa61873375c6c64155e98f5958af0299a",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=1",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s1-equivalent.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 30,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435652,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435700,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "second_read",
+      "seed": 0,
+      "optimization": 0,
+      "path": "ram-o0-s0-second_read.elf",
+      "sha256": "14457cfe381df1215667382fa1ef1049fa92d06bca89c7f0cad935cc0c630251",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o0-s0-second_read.dis",
+      "disassembly_sha256": "18a9a30c2b1567b08c39aa0f01a8199f10b1506a3f7740e165c713aa7450dd97",
+      "elf_header": "ram-o0-s0-second_read.elf-header.txt",
+      "elf_header_sha256": "2352bd905b661594c652ae2d1ac045219c0b35b3ce2926bbefd516fc95553ec7",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=2",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s0-second_read.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 26,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435652,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435684,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "second_read",
+      "seed": 1,
+      "optimization": 0,
+      "path": "ram-o0-s1-second_read.elf",
+      "sha256": "e5b1920ad66adb07da19496ecade2fd79de4d86984606342521bc519799bb922",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o0-s1-second_read.dis",
+      "disassembly_sha256": "7ae6af4c1859e0fc2e7c90c19f839408a668c891270f9891d666b0ad83900191",
+      "elf_header": "ram-o0-s1-second_read.elf-header.txt",
+      "elf_header_sha256": "2352bd905b661594c652ae2d1ac045219c0b35b3ce2926bbefd516fc95553ec7",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=2",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s1-second_read.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 26,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435652,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435684,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "xor1",
+      "seed": 0,
+      "optimization": 0,
+      "path": "ram-o0-s0-xor1.elf",
+      "sha256": "15c1a967118e11106296c18483bbdb46adb826fbba2518b8a62c5916df2fd397",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o0-s0-xor1.dis",
+      "disassembly_sha256": "ba6e2613e70c3322fe4d60fed6ccac776d00af1efed0cf26204aa656c28afd25",
+      "elf_header": "ram-o0-s0-xor1.elf-header.txt",
+      "elf_header_sha256": "4e65c7b785bc0890af8baf925e8411f6a4117b8674f8a89df6858f884fc56e76",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=3",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s0-xor1.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 27,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435652,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435688,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "xor1",
+      "seed": 1,
+      "optimization": 0,
+      "path": "ram-o0-s1-xor1.elf",
+      "sha256": "f43f5aae378f8f2a34ee46cb35a431c0bc2603810691061ab6bf74d13c6b1d99",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o0-s1-xor1.dis",
+      "disassembly_sha256": "44f7a436ae577773ebbec046ae2a146a52005c9cac22db0bd488d652cbbb20ec",
+      "elf_header": "ram-o0-s1-xor1.elf-header.txt",
+      "elf_header_sha256": "4e65c7b785bc0890af8baf925e8411f6a4117b8674f8a89df6858f884fc56e76",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=3",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-s1-xor1.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 27,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435652,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435688,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "original",
+      "seed": 0,
+      "optimization": 2,
+      "path": "ram-o2-s0-original.elf",
+      "sha256": "c15e169bbca5a8f4c291bde8c259dde4183934e38bb44e5dd7451fcaf9e308d1",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o2-s0-original.dis",
+      "disassembly_sha256": "5f0c0691e7e6684a056f4e9457df5661080b6373f7532fbeae673bbe238f3c31",
+      "elf_header": "ram-o2-s0-original.elf-header.txt",
+      "elf_header_sha256": "5f35167fdc24d5ae6a465770a5469dafed6cc11b6d95e3734ab22199b0fe55f1",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=0",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s0-original.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 8,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "original",
+      "seed": 1,
+      "optimization": 2,
+      "path": "ram-o2-s1-original.elf",
+      "sha256": "8cece1924353f295918e078363a1d5b85ed44c815eb0aa62b4cde9d3b3b13fcc",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o2-s1-original.dis",
+      "disassembly_sha256": "b3e546c44321c56420619170555bae56cb151d2c45b60f506c56a4b449e555c0",
+      "elf_header": "ram-o2-s1-original.elf-header.txt",
+      "elf_header_sha256": "5f35167fdc24d5ae6a465770a5469dafed6cc11b6d95e3734ab22199b0fe55f1",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=0",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s1-original.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 8,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "equivalent",
+      "seed": 0,
+      "optimization": 2,
+      "path": "ram-o2-s0-equivalent.elf",
+      "sha256": "35d3a24557e6e83e1951d06bb1748d4b70c9924caed239a9b0bdcc1d36d3bf29",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o2-s0-equivalent.dis",
+      "disassembly_sha256": "e1f0a6eec1e9430e7de960237b53e89e5984260722a1f7fe29284104d8bf3968",
+      "elf_header": "ram-o2-s0-equivalent.elf-header.txt",
+      "elf_header_sha256": "46476dff707a2853c42073a25934669a259f5a3bce0fbbaeb35993ec81cf468c",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=1",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s0-equivalent.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 8,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "equivalent",
+      "seed": 1,
+      "optimization": 2,
+      "path": "ram-o2-s1-equivalent.elf",
+      "sha256": "2c10399daad1b79c9e7a931bee2bfea13f90fa51f8ca56ff3f62c4bb9cf565d2",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o2-s1-equivalent.dis",
+      "disassembly_sha256": "c07990f293bfe78e879e2c5a78138fd2f9eb04ea837f43429f25879c1ec12540",
+      "elf_header": "ram-o2-s1-equivalent.elf-header.txt",
+      "elf_header_sha256": "46476dff707a2853c42073a25934669a259f5a3bce0fbbaeb35993ec81cf468c",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=1",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s1-equivalent.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 8,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "second_read",
+      "seed": 0,
+      "optimization": 2,
+      "path": "ram-o2-s0-second_read.elf",
+      "sha256": "c76027a6c99eb36991626c317bdc662cd33ec47051553990490f202a688b18eb",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o2-s0-second_read.dis",
+      "disassembly_sha256": "e48553f33db7a18108eb5599c8492d492a7846116b8adde450e169bfbdce619b",
+      "elf_header": "ram-o2-s0-second_read.elf-header.txt",
+      "elf_header_sha256": "d65181183bb45adfdbf3d2655407443bea06885e240d58a245f1d335d528bc27",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=2",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s0-second_read.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 8,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "second_read",
+      "seed": 1,
+      "optimization": 2,
+      "path": "ram-o2-s1-second_read.elf",
+      "sha256": "6bfcd435f01630837bc970a730dea86eb41ea1427969a2d49ec742dcbbd00eb8",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o2-s1-second_read.dis",
+      "disassembly_sha256": "ee594502286b7bd713f0ea50ba32245a7e5bf542866d58bf88db27610cf8148e",
+      "elf_header": "ram-o2-s1-second_read.elf-header.txt",
+      "elf_header_sha256": "d65181183bb45adfdbf3d2655407443bea06885e240d58a245f1d335d528bc27",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=2",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s1-second_read.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 8,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "xor1",
+      "seed": 0,
+      "optimization": 2,
+      "path": "ram-o2-s0-xor1.elf",
+      "sha256": "e2f554e3eb194ba14b1896ca95e545629e0d0034c612739fe1d9982649555ee2",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o2-s0-xor1.dis",
+      "disassembly_sha256": "8942522c5d99caf11fd197f828bc20b1e4aaf63c6f184a9409a3a5b0d619ba69",
+      "elf_header": "ram-o2-s0-xor1.elf-header.txt",
+      "elf_header_sha256": "c3b91d3f6e6bda8dded4118628e189cdb1b28cabfdab9549848ec64c1c4e5eaf",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=3",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s0-xor1.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 9,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "ram",
+      "variant": "xor1",
+      "seed": 1,
+      "optimization": 2,
+      "path": "ram-o2-s1-xor1.elf",
+      "sha256": "b44c018e190c9d5669291e938648d3bcbb29d73e7bd8b02d0c4ee3d3c506577f",
+      "config": "ram.toml",
+      "config_sha256": "0774e8449e97eef403ae5cc9595b39082b8fe4f10f21446a14c63e5069dc8799",
+      "disassembly": "ram-o2-s1-xor1.dis",
+      "disassembly_sha256": "bffc40f420431525974e00c16473a1e2d4d0b330a913167d33f60a76ebc140c9",
+      "elf_header": "ram-o2-s1-xor1.elf-header.txt",
+      "elf_header_sha256": "c3b91d3f6e6bda8dded4118628e189cdb1b28cabfdab9549848ec64c1c4e5eaf",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=3",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-s1-xor1.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 9,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "original",
+      "seed": 0,
+      "optimization": 0,
+      "path": "read_to_clear-o0-s0-original.elf",
+      "sha256": "48d54b2f1cc795121fc60328f30b82e82b31194fa0f1831da978c02c40a0d727",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o0-s0-original.dis",
+      "disassembly_sha256": "40e8ce4dbcd92d8d933c46e90caa02076ee7485b8b4630c13f17551abeac7ede",
+      "elf_header": "read_to_clear-o0-s0-original.elf-header.txt",
+      "elf_header_sha256": "e17c9d6f73bca1d0ee220e4f7637796816c5282917318f10637d9296c4926fb9",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=0",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s0-original.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 32,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435648,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435664,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435680,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435708,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "original",
+      "seed": 1,
+      "optimization": 0,
+      "path": "read_to_clear-o0-s1-original.elf",
+      "sha256": "b8dd5d3ba02dfde06b8a30c853cb35c31edfc51aa343e72a1b7bc991e90dfb75",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o0-s1-original.dis",
+      "disassembly_sha256": "3fced214b2e4777e752fd504fa1cb264335813f5a671102d1fa4ec977272f284",
+      "elf_header": "read_to_clear-o0-s1-original.elf-header.txt",
+      "elf_header_sha256": "e17c9d6f73bca1d0ee220e4f7637796816c5282917318f10637d9296c4926fb9",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=0",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s1-original.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 32,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435648,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435664,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435680,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435708,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "equivalent",
+      "seed": 0,
+      "optimization": 0,
+      "path": "read_to_clear-o0-s0-equivalent.elf",
+      "sha256": "609e1eed88932cce1a7d9a8515ee9ba4406c4d0fa3766254cf400986bf456b10",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o0-s0-equivalent.dis",
+      "disassembly_sha256": "dedbeb2334e6be7ff151bfc648feab9f0f5dbaf2321f6b045f76bf08e20e0c37",
+      "elf_header": "read_to_clear-o0-s0-equivalent.elf-header.txt",
+      "elf_header_sha256": "a2e96b2309955cc2d4267a7ed08ce4209c21528fb1d7c8609d54b4ff5199f109",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=1",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s0-equivalent.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 36,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435648,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435664,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435680,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435724,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "equivalent",
+      "seed": 1,
+      "optimization": 0,
+      "path": "read_to_clear-o0-s1-equivalent.elf",
+      "sha256": "0fd17bc1f90dc26f8962e522a5fdbcc3ce82acf049b79b7fec51d98245eb72d2",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o0-s1-equivalent.dis",
+      "disassembly_sha256": "807551df73aa842567938c9468d33baf892fc75dab6b979ac46d86ece099b70f",
+      "elf_header": "read_to_clear-o0-s1-equivalent.elf-header.txt",
+      "elf_header_sha256": "a2e96b2309955cc2d4267a7ed08ce4209c21528fb1d7c8609d54b4ff5199f109",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=1",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s1-equivalent.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 36,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435648,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435664,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435680,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435724,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "second_read",
+      "seed": 0,
+      "optimization": 0,
+      "path": "read_to_clear-o0-s0-second_read.elf",
+      "sha256": "194a1f8f38a45072ffe22bf29fffb6420cca884f5b74a2dba46d13fba752941f",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o0-s0-second_read.dis",
+      "disassembly_sha256": "e9b4fcd5f485eaddd66418b42f122e9d80ba24a1d8623b481d0844a857f53efd",
+      "elf_header": "read_to_clear-o0-s0-second_read.elf-header.txt",
+      "elf_header_sha256": "e17c9d6f73bca1d0ee220e4f7637796816c5282917318f10637d9296c4926fb9",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=2",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s0-second_read.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 32,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435648,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435664,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435680,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435708,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "second_read",
+      "seed": 1,
+      "optimization": 0,
+      "path": "read_to_clear-o0-s1-second_read.elf",
+      "sha256": "f79a74fe135fb6ee0eb4fc3ee5ee07ecc9bd4666956696272b631c870bb4aaf8",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o0-s1-second_read.dis",
+      "disassembly_sha256": "8a434634eabf0b08dd47b6b3c3be664cf26ea4ba53f6e4fcf0a8b84a686988a2",
+      "elf_header": "read_to_clear-o0-s1-second_read.elf-header.txt",
+      "elf_header_sha256": "e17c9d6f73bca1d0ee220e4f7637796816c5282917318f10637d9296c4926fb9",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=2",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s1-second_read.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 32,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435648,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435664,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435680,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435708,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "xor1",
+      "seed": 0,
+      "optimization": 0,
+      "path": "read_to_clear-o0-s0-xor1.elf",
+      "sha256": "9df5cf2d1c5f0f4f1037d409e6dca183270926390f7c78c32b2723db8646a895",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o0-s0-xor1.dis",
+      "disassembly_sha256": "4277d8a6b367cd86a12fc872d8b92620c67cbb5f91a93d943b8ce3afbc8e3cf6",
+      "elf_header": "read_to_clear-o0-s0-xor1.elf-header.txt",
+      "elf_header_sha256": "6a0b14fd8380499f2cd38fbfad0151cd4b71a22cdd01da2d014d5204edcfd465",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=3",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s0-xor1.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 33,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435648,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435664,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435680,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435712,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "xor1",
+      "seed": 1,
+      "optimization": 0,
+      "path": "read_to_clear-o0-s1-xor1.elf",
+      "sha256": "08df473713c3d39ad471457093d75b1951ffdd99cb5ba41fccef3d85023999fa",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o0-s1-xor1.dis",
+      "disassembly_sha256": "f268f1f9c4e3964f12743590808b747f80ccd9b8ed83793a51aeafc79a3e2909",
+      "elf_header": "read_to_clear-o0-s1-xor1.elf-header.txt",
+      "elf_header_sha256": "6a0b14fd8380499f2cd38fbfad0151cd4b71a22cdd01da2d014d5204edcfd465",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=3",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-s1-xor1.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 33,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435648,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435664,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435680,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435712,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "original",
+      "seed": 0,
+      "optimization": 2,
+      "path": "read_to_clear-o2-s0-original.elf",
+      "sha256": "4f7d19f96f43479fc4de10116186147a0ca7a8a0c2cb44fd52008d0b53adb7ab",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o2-s0-original.dis",
+      "disassembly_sha256": "2e3d986bcd31eb74e3e9b8ee14471c90d5380f40c74d3ae68bf8e2a63cc2d8f8",
+      "elf_header": "read_to_clear-o2-s0-original.elf-header.txt",
+      "elf_header_sha256": "086ec4d80f3c350a8667c318c77e11b5171bda14014a05acc0b6c857b03ed9c0",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=0",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s0-original.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 10,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435636,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "original",
+      "seed": 1,
+      "optimization": 2,
+      "path": "read_to_clear-o2-s1-original.elf",
+      "sha256": "0c88a1b98af72dd5b3210cc94cb7f8aea6ef3eb0746c5e824e4549fd3f05a0e7",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o2-s1-original.dis",
+      "disassembly_sha256": "2f72aae94edcf493df2b1cdcb8d3370c915b137f8c85bdc81bd158299ebb2ae0",
+      "elf_header": "read_to_clear-o2-s1-original.elf-header.txt",
+      "elf_header_sha256": "eb80476e8f61fe53c277f583af5e3f2c83380484b798072e6280299fa2938b5a",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=0",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s1-original.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 11,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435636,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435640,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "equivalent",
+      "seed": 0,
+      "optimization": 2,
+      "path": "read_to_clear-o2-s0-equivalent.elf",
+      "sha256": "4063382a70c9d7bc4df0d532c6bf4113667eab204a0f7993b704606e8526d721",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o2-s0-equivalent.dis",
+      "disassembly_sha256": "3a2a6e7830aa1c6216a8b484e5f22621c81f2339bfe9ffef48c02290423a7db8",
+      "elf_header": "read_to_clear-o2-s0-equivalent.elf-header.txt",
+      "elf_header_sha256": "ae337ed258f84801747a84132665a4b525b7c4548a91a49d0932bc6389f24e47",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=1",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s0-equivalent.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 10,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435636,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "equivalent",
+      "seed": 1,
+      "optimization": 2,
+      "path": "read_to_clear-o2-s1-equivalent.elf",
+      "sha256": "61ba4c3dc3350070d14cd3e8b673a4633e42cf6841bf5e47fb30518e634430ac",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o2-s1-equivalent.dis",
+      "disassembly_sha256": "37184ce9d86e9cc7e8cd02c66dd81e24ebf69a02c3052fda6eff77bb4d95743d",
+      "elf_header": "read_to_clear-o2-s1-equivalent.elf-header.txt",
+      "elf_header_sha256": "6b2b85dc0b092eeb0f2dae5efdad5c5cd476eb262b7a322447268abf78d118a2",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=1",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s1-equivalent.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 11,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435636,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435640,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "second_read",
+      "seed": 0,
+      "optimization": 2,
+      "path": "read_to_clear-o2-s0-second_read.elf",
+      "sha256": "353971916f259fa562238da3659430acf8e2f9a952eb4a12854a9b776fb39feb",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o2-s0-second_read.dis",
+      "disassembly_sha256": "af4e215ce67f1c55d7489bd71b534d6d86e2f1dd552dabca22ab508bad6b0bca",
+      "elf_header": "read_to_clear-o2-s0-second_read.elf-header.txt",
+      "elf_header_sha256": "f31225e1f84c67b197475a8030b3b5430188ec5a39549e71d82b66211ae06580",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=2",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s0-second_read.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 10,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435636,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "second_read",
+      "seed": 1,
+      "optimization": 2,
+      "path": "read_to_clear-o2-s1-second_read.elf",
+      "sha256": "58d2bc5d34d3ac2e93d368eca39b1fce2de42bf9d69e5657387278595db75f04",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o2-s1-second_read.dis",
+      "disassembly_sha256": "4e87925d35a59c7965e156ea854fd3a2648c3489eff4e2a43494efba41aa1568",
+      "elf_header": "read_to_clear-o2-s1-second_read.elf-header.txt",
+      "elf_header_sha256": "650a7195cbcdc30326d24e43cd22cb088e89d557840bc880f374d6851bdecd1a",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=2",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s1-second_read.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 11,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435636,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435640,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "xor1",
+      "seed": 0,
+      "optimization": 2,
+      "path": "read_to_clear-o2-s0-xor1.elf",
+      "sha256": "06ead987e0ba04579b042f2be7d2a77d26361745771185d2dc902ec7da0e9561",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o2-s0-xor1.dis",
+      "disassembly_sha256": "916defa13961ab660c081b8cb14281f0130b7cf8920a30673204abbd74ad56db",
+      "elf_header": "read_to_clear-o2-s0-xor1.elf-header.txt",
+      "elf_header_sha256": "6b2b85dc0b092eeb0f2dae5efdad5c5cd476eb262b7a322447268abf78d118a2",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=3",
+        "-DAUDIT_SEED=0u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s0-xor1.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 11,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435620,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435632,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435636,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435640,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "xor1",
+      "seed": 1,
+      "optimization": 2,
+      "path": "read_to_clear-o2-s1-xor1.elf",
+      "sha256": "16cb8d0578ae4f33a841389f371a76ab5cb4f1b4035e8ca089cecbf041711f85",
+      "config": "read_to_clear.toml",
+      "config_sha256": "b3d7717c5327c6e27e7a8bb76f1f3b061d8c11906f22efbba75be6c95b304a1b",
+      "disassembly": "read_to_clear-o2-s1-xor1.dis",
+      "disassembly_sha256": "49758b07c6dc7b5efe0cb70595b019cd75241277e840589a36c41af4387d546e",
+      "elf_header": "read_to_clear-o2-s1-xor1.elf-header.txt",
+      "elf_header_sha256": "0275b185a34d29059729dbb621fd258e85c16d17bc6c725876801166e7e985d0",
+      "symbols": {
+        "audit_entry": 268435604,
+        "audit_state": 268632064,
+        "audit_output": 268693504
+      },
+      "command": [
+        "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-m32",
+        "-mcpu=powerpc",
+        "-msdata=none",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-fno-pic",
+        "-fno-pie",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-unwind-tables",
+        "-nostdlib",
+        "-static",
+        "-no-pie",
+        "-Wl,--build-id=none",
+        "-Wl,-e,_start",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=3",
+        "-DAUDIT_SEED=1u",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/linux-entry.S",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/link.ld",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-s1-xor1.elf"
+      ],
+      "access_check": {
+        "entry": "audit_entry",
+        "instructions_checked": 12,
+        "state_loads": 2,
+        "output_stores": 1,
+        "accesses": [
+          {
+            "pc": 268435612,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435624,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435628,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435636,
+            "instruction": "lwz",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435640,
+            "instruction": "stw",
+            "address": 268632064,
+            "width_bits": 32
+          },
+          {
+            "pc": 268435644,
+            "instruction": "stw",
+            "address": 268693504,
+            "width_bits": 32
+          }
+        ],
+        "method": "straight-line constant-address instruction check"
+      }
+    }
+  ],
+  "native_libraries": [
+    {
+      "model": "ram",
+      "variant": "original",
+      "optimization": 0,
+      "path": "ram-o0-original.so",
+      "sha256": "d084caa21159d3d2afc36717d23769618f403d501d1914510e1c8c75fb18cba1",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=0",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-original.so"
+      ]
+    },
+    {
+      "model": "ram",
+      "variant": "equivalent",
+      "optimization": 0,
+      "path": "ram-o0-equivalent.so",
+      "sha256": "72abba112e57d5dec64c29db252ceb045b428d30f3161fd993f03d28602e23c2",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=1",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-equivalent.so"
+      ]
+    },
+    {
+      "model": "ram",
+      "variant": "second_read",
+      "optimization": 0,
+      "path": "ram-o0-second_read.so",
+      "sha256": "2a0ba5029a30fcdadaaff58a81199c9d8d8f673dba1170317ef887ee35cea3c0",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=2",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-second_read.so"
+      ]
+    },
+    {
+      "model": "ram",
+      "variant": "xor1",
+      "optimization": 0,
+      "path": "ram-o0-xor1.so",
+      "sha256": "c06d7414637afd9893bf47f643cac33484569d48c0b288912c0dc089525b8ffc",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=3",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o0-xor1.so"
+      ]
+    },
+    {
+      "model": "ram",
+      "variant": "original",
+      "optimization": 2,
+      "path": "ram-o2-original.so",
+      "sha256": "5256b685881ded8a51c7b138352a803e192cf771c65c8d329b35bc994e6b2137",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=0",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-original.so"
+      ]
+    },
+    {
+      "model": "ram",
+      "variant": "equivalent",
+      "optimization": 2,
+      "path": "ram-o2-equivalent.so",
+      "sha256": "5256b685881ded8a51c7b138352a803e192cf771c65c8d329b35bc994e6b2137",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=1",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-equivalent.so"
+      ]
+    },
+    {
+      "model": "ram",
+      "variant": "second_read",
+      "optimization": 2,
+      "path": "ram-o2-second_read.so",
+      "sha256": "616bb0f5b227bd22807ec247759ca50ef332c359e7efc7029cf0787893939f6a",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=2",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-second_read.so"
+      ]
+    },
+    {
+      "model": "ram",
+      "variant": "xor1",
+      "optimization": 2,
+      "path": "ram-o2-xor1.so",
+      "sha256": "4e904293457b65a6e0e9d3a7c5cf63e38ce05c051605e015f8d702be517990e2",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=0",
+        "-DAUDIT_VARIANT=3",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/ram-o2-xor1.so"
+      ]
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "original",
+      "optimization": 0,
+      "path": "read_to_clear-o0-original.so",
+      "sha256": "14d19782cca7901861e8d2f6e692451d297c9aca0d240bd18ef811b2767f65c7",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=0",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-original.so"
+      ]
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "equivalent",
+      "optimization": 0,
+      "path": "read_to_clear-o0-equivalent.so",
+      "sha256": "6dcc09034532f509c2399b4c7e97ea404c0583df630baabcf761f52358c3d997",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=1",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-equivalent.so"
+      ]
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "second_read",
+      "optimization": 0,
+      "path": "read_to_clear-o0-second_read.so",
+      "sha256": "38bb86cd948246630b9a42370e7d37d1ef5a21776fb199a560969219d5e97b33",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=2",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-second_read.so"
+      ]
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "xor1",
+      "optimization": 0,
+      "path": "read_to_clear-o0-xor1.so",
+      "sha256": "eaa103bf753542b09a03c378c120c9b7a1f4ae66c38071230bafe71598cbe41b",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=3",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o0-xor1.so"
+      ]
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "original",
+      "optimization": 2,
+      "path": "read_to_clear-o2-original.so",
+      "sha256": "901f8a3a7826e0242634a0c2626f5ce0b85d0eef955ce77756c4b0920799b264",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=0",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-original.so"
+      ]
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "equivalent",
+      "optimization": 2,
+      "path": "read_to_clear-o2-equivalent.so",
+      "sha256": "901f8a3a7826e0242634a0c2626f5ce0b85d0eef955ce77756c4b0920799b264",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=1",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-equivalent.so"
+      ]
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "second_read",
+      "optimization": 2,
+      "path": "read_to_clear-o2-second_read.so",
+      "sha256": "c7bae930e0f05f7a2053f3c9932b44cf390ef4581b34aa3fb3382e4d2507d2dc",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=2",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-second_read.so"
+      ]
+    },
+    {
+      "model": "read_to_clear",
+      "variant": "xor1",
+      "optimization": 2,
+      "path": "read_to_clear-o2-xor1.so",
+      "sha256": "8da60dce5f0051d0c44a772126c92d4320215679291d38de64da3e13d4a170f6",
+      "command": [
+        "/usr/bin/x86_64-linux-gnu-gcc-14",
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fPIC",
+        "-shared",
+        "-DAUDIT_HOST=1",
+        "-DAUDIT_MODEL=1",
+        "-DAUDIT_VARIANT=3",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/fixtures/device.c",
+        "-o",
+        "/workspace/scratch/9ff119dca88a/pate/experiments/mmio-observation/build/read_to_clear-o2-xor1.so"
+      ]
+    }
+  ]
+}

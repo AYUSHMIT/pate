@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "experiments/mmio-observation/tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "summary_verified": true,
+  "passed_tests": 29,
+  "stdout_stderr_sha256": "98863dd2e6aba706f7c6162934f13b853ad99ab16bba85bf979afae49d30dc3e"
+}

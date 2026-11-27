@@ -7,6 +7,7 @@ on:
       - experiments/mmio-observation/**
       - .github/workflows/mmio-observation.yml
   pull_request:
+    branches: [master]
     paths:
       - experiments/mmio-observation/**
       - .github/workflows/mmio-observation.yml
@@ -51,6 +52,8 @@ jobs:
           curl --fail --location --retry 3 \
             https://yices.csl.sri.com/releases/2.6.2/yices-2.6.2-x86_64-pc-linux-gnu-static-gmp.tar.gz \
             --output "$RUNNER_TEMP/yices.tar.gz"
+          printf '%s  %s\n' '26cd7dc9bf4c7a1957fa9bd8a205a8194c4759e1b29f6692186af72be8b281d1' \
+            "$RUNNER_TEMP/yices.tar.gz" | sha256sum --check --strict
           tar -xzf "$RUNNER_TEMP/yices.tar.gz" -C "$RUNNER_TEMP"
           echo "$RUNNER_TEMP/yices-2.6.2/bin" >> "$GITHUB_PATH"
       - name: Test reference and result handling

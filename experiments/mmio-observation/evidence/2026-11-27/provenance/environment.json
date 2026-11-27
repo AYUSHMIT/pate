@@ -1,0 +1,78 @@
+{
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "upstream_commit": "284879d8bb3865e0f96e430995b944af2fbf21a0",
+  "submodule_status": [
+    "afbeff2db4781e138bb8c920d803b7e7a88383b7 submodules/arm-asl-parser (afbeff2)",
+    " dacd522014ca172e4d78ae6b65f41cedd027d1c8 submodules/asl-translator (remotes/origin/separate-backend-23-gdacd522)",
+    " 3af4ac55ccc4ae4b30388d068936fc9a2fbfb85d submodules/crucible (crux-v0.4-1472-g3af4ac55c)",
+    " 5aaf6b478e25da44b82c4d5d07fb90b71466e661 submodules/demangler (v1.3.1.0)",
+    " 1599d9707498bff1fee9ed1a37804675c79eee08 submodules/dismantle (remotes/origin/bv-sized-40-g1599d97)",
+    " ab74e6e73ec92cf3219823d5336f190a1464118b submodules/dwarf (remotes/origin/stable-5-gab74e6e)",
+    " 5531161f64f92e13ae04cfe0de0042754ae050cd submodules/elf-edit (5531161)",
+    " 5370202ab9563cb9a0a15475aa801e9b37fa5ab4 submodules/flexdis86 (5370202)",
+    " 94e384842b214ba72446d1694446fb5261ab6ce2 submodules/llvm-pretty (llvm-pretty-0.7.1.0-166-g94e3848)",
+    " 2bb5a2990a460f4eef9a81521cc402b2d9827992 submodules/macaw (remotes/origin/dm/pate)",
+    " 342b6eb7f2344d98732b897877e1699dc0a8551e submodules/macaw-loader (remotes/origin/update/ghc-8.8-30-g342b6eb)",
+    " 95869cd611c037aea6446599fdba9c0984b8635c submodules/parameterized-utils (v2.1.6.0-16-g95869cd)",
+    " d1b456b20d7a2f37a9bf33c1b051dace5e1181eb submodules/renovate (rehosted-445-gd1b456b)",
+    " 2147ee3e7b966ca635289efa742f9e5f4c7bb540 submodules/semmc (remotes/origin/no_stack_ci-16-g2147ee3e)",
+    " 076f49b996bd328764a9c6edece6b7c34cb1cfb4 submodules/what4 (v1.3-47-g076f49b9)",
+    " 4c85f55b86c976b88c8e03e0db125c4994f38dd7 tools/pate/static/cytoscape-node-html-label (v1.1.5-31-g4c85f55)",
+    " e6541de603f5714f572238573ea06ef17503282b tools/pate/static/cytoscape.js (v3.17.2-75-ge6541de60)",
+    " 267f9ff4caf68b54c0383c66a6a417c488cedd86 tools/pate/static/cytoscape.js-dagre (v2.3.2-1-g267f9ff)",
+    " 933822b991ea9b077521e5b797b8b4927c94f0a4 tools/pate/static/dagre (v0.8.5-16-g933822b)"
+  ],
+  "tools": {
+    "ghc": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/ghc-9.6.2/bin/ghc",
+      "version_output": "9.6.2",
+      "sha256": "638175399d60d17e496d09efbecd9ba7d7a9d60b7157b52c8886b0b5e972edf8"
+    },
+    "cabal": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/cabal-bin/cabal",
+      "version_output": "3.10.2.0",
+      "sha256": "203bd33d52aa56e7f0b7dbc98668df2a78421c93c95da5e4427f5f7d3cdfbe1b"
+    },
+    "yices": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/yices-2.6.2/bin/yices",
+      "version_output": "Yices 2.6.2\nCopyright SRI International.\nLinked with GMP 6.1.2\nCopyright Free Software Foundation, Inc.\nBuild date: 2020-04-13\nPlatform: x86_64-pc-linux-gnu (release/static)",
+      "sha256": "ca860fd98b0cce65f1b19808e4b9841a37dd8a165f8904a6ad6fdbb7bd1e4e3d"
+    },
+    "z3": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/z3",
+      "version_output": "Z3 version 4.13.3 - 64 bit",
+      "sha256": "c28f5598836fe6312ed4b25a98525fb58e2800d4c4f8117a1daeb04e6327686c"
+    },
+    "powerpc-linux-gnu-gcc": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-gcc",
+      "version_output": "powerpc-linux-gnu-gcc (Debian 14.2.0-19) 14.2.0\nCopyright (C) 2024 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "sha256": "af9f695a54f221c0535c7535c8a972f10b6250d7821938dcb59cefd81e1bacef"
+    },
+    "powerpc-linux-gnu-objdump": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/powerpc-linux-gnu-objdump",
+      "version_output": "GNU objdump (GNU Binutils for Debian) 2.44\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) any later version.\nThis program has absolutely no warranty.",
+      "sha256": "e3528c679514efbf539a2716eff8603929ee7c936d3ee238081c669af7a21092"
+    },
+    "qemu-ppc": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/qemu-ppc",
+      "version_output": "qemu-ppc version 10.0.13 (Debian 1:10.0.13+ds-0+deb13u1)\nCopyright (c) 2003-2025 Fabrice Bellard and the QEMU Project developers",
+      "sha256": "5beff7081702ffa17d0543cfa0fbccc01d4d8dd7d3563508c1546e19bb13f8e2"
+    },
+    "ld.gold": {
+      "path": "/workspace/scratch/9ff119dca88a/toolchain/root/usr/bin/ld.gold",
+      "version_output": "GNU gold (GNU Binutils for Debian 2.44) 1.16\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis program is free software; you may redistribute it under the terms of\nthe GNU General Public License version 3 or (at your option) a later version.\nThis program has absolutely no warranty.",
+      "sha256": "caeb1f37c27384641ef4cf40a086c6c2824d2248504e3c74e3ddc5f7d1c36092"
+    }
+  },
+  "freeze_sha256": "760bde9f0c64049c01fae2d6d3b63281c2134a11c675fa8eb7e4b03473878729",
+  "project_sha256": "1fc863c50ed1c0188c99c34cbe6b6d857d427262fd7c407183ffc5759aa74b5e",
+  "build_command": [
+    "cabal",
+    "build",
+    "exe:pate",
+    "test:pate-test-ppc32",
+    "--enable-tests",
+    "--disable-optimization",
+    "-j3"
+  ]
+}

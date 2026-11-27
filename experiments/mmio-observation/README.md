@@ -9,6 +9,29 @@ Python transition model, native compiled C execution, and the exact PowerPC32
 ELFs executed under QEMU and analyzed by PATE. All work is attributed to the
 upstream verifier; the contribution here is the executable audit and evidence.
 
+## Executed result
+
+The [preserved 2026-11-27 evidence](evidence/2026-11-27/README.md) records a
+successful build of the **standard, unmodified upstream `exe:pate`**, followed
+by all 26 expected comparison outcomes: 15 unconditional equivalences and 11
+reported observable differences. There were no conditional, inconclusive,
+unsupported, or timed-out cases.
+
+| Validation | Result |
+|---|---|
+| Reference, runner, and evidence-handling tests | 29/29 passed |
+| Upstream `const-global` test selection | 4/4 passed |
+| Compiled native executions | 4,160/4,160 passed |
+| Exact PowerPC ELFs executed under QEMU | 32/32 passed |
+| Standard PATE comparisons | 26/26 matched the independent expectations |
+
+For `q=1`, selecting the second read is equivalent under ordinary memory and
+has an observable output difference under the explicit read-to-clear model,
+at both optimization levels. For `q=0`, it is equivalent under both models.
+The arithmetic control is equivalent in every fixture; the XOR control differs
+in every fixture. The snapshot includes raw logs, per-case records, toolchain
+provenance, and the exact compiled fixtures with SHA-256 checksums.
+
 ## Question and contract
 
 Both programs read a 32-bit status register twice, then publish one output.
@@ -104,10 +127,11 @@ satisfy a negative equivalence test. Raw logs remain the primary result evidence
 
 ## Interpretation
 
-If the ordinary-memory analysis establishes equivalence while the explicit
-stateful model exposes the output difference, this demonstrates the consequence
-of the stated environment assumption. It does not establish a PATE soundness bug,
-a new verification technique, or behavior of a physical peripheral.
+The ordinary-memory analysis establishes equivalence for the second-read patch,
+while the explicit stateful model exposes its output difference at `q=1`.
+This demonstrates the consequence of the stated environment assumption. It does
+not establish a PATE soundness bug, a new verification technique, or behavior of
+a physical peripheral. No verifier-core change was needed for this case.
 
 The next research decision depends on whether existing environment-model hooks
 are inadequate for a consequential device class. This first audit measures the

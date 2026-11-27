@@ -1,0 +1,5 @@
+source /workspace/scratch/9ff119dca88a/toolchain/activate.sh
+cabal build exe:pate test:pate-test-ppc32 --enable-tests --disable-optimization -j3
+# Installed extracted Debian binutils-gold + binutils-gold-x86-64-linux-gnu 2.44-2 after initial clock FFI link failure. No source changes.
+cabal build exe:pate test:pate-test-ppc32 --enable-tests --disable-optimization -j3
+dist-newstyle/build/x86_64-linux/ghc-9.6.2/pate-0.9.0/t/pate-test-ppc32/noopt/build/pate-test-ppc32/pate-test-ppc32 -p const-global -t 300s

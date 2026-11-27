@@ -251,8 +251,10 @@ def main():
     if args.pate and not pate:
         parser.error(f"PATE executable unavailable: {args.pate}")
     prepare_output(output)
-    summary = {"schema_version": 1, "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+    summary = {"schema_version": 1, "run_status": "in_progress",
+               "generated_at_utc": datetime.now(timezone.utc).isoformat(),
                "upstream_commit": manifest["upstream_commit"], "checkout_commit": version(["git", "rev-parse", "HEAD"]),
+               "working_tree_changes": version(["git", "status", "--porcelain=v1"]),
                "build_manifest_sha256": sha256(build_dir / "manifest.json"),
                "python": sys.version, "qemu_version": version([qemu, "--version"]),
                "reference_sha256": sha256(HERE / "reference.py"), "runner_sha256": sha256(__file__),
@@ -260,7 +262,8 @@ def main():
     write_json(output / "reference-summary.json", reference.summarize_corpus())
     summary["native"] = native_checks(build_dir, manifest, output)
     summary["powerpc"] = powerpc_checks(build_dir, manifest, qemu, output)
-    summary["pate"] = {"status": "not_run", "reason": "No --pate executable supplied"}
+    summary["pate"] = ({"status": "in_progress", "reason": "PATE results are not complete"}
+                       if args.pate else {"status": "not_run", "reason": "No --pate executable supplied"})
     write_json(output / "summary.json", summary)
     if args.pate:
         summary["pate"] = pate_checks(build_dir, manifest, str(Path(pate).resolve()),
@@ -268,6 +271,7 @@ def main():
     shutil.copyfile(build_dir / "manifest.json", output / "build-manifest.json")
     summary["evidence_sha256"] = {str(p.relative_to(output)): sha256(p) for p in output.rglob("*")
                                   if p.is_file() and p != output / "summary.json"}
+    summary["run_status"] = "completed"
     write_json(output / "summary.json", summary)
     print(json.dumps(summary, indent=2))
     success = summary["native"]["failed"] == summary["powerpc"]["failed"] == 0

@@ -1,0 +1,55 @@
+{
+  "comparison_count": 1560,
+  "comparisons": [
+    {
+      "equal": 260,
+      "model": "ram",
+      "unequal": 0,
+      "variant": "equivalent"
+    },
+    {
+      "equal": 260,
+      "model": "ram",
+      "unequal": 0,
+      "variant": "second_read"
+    },
+    {
+      "equal": 0,
+      "model": "ram",
+      "unequal": 260,
+      "variant": "xor1"
+    },
+    {
+      "equal": 260,
+      "model": "read_to_clear",
+      "unequal": 0,
+      "variant": "equivalent"
+    },
+    {
+      "equal": 1,
+      "model": "read_to_clear",
+      "unequal": 259,
+      "variant": "second_read"
+    },
+    {
+      "equal": 0,
+      "model": "read_to_clear",
+      "unequal": 260,
+      "variant": "xor1"
+    }
+  ],
+  "execution_count": 2080,
+  "schema_version": 1,
+  "seed_count": 260,
+  "seed_domain": {
+    "additional_seeds": [
+      2147483647,
+      2147483648,
+      2147483649,
+      4294967295
+    ],
+    "exhaustive_max": 255,
+    "exhaustive_min": 0
+  },
+  "word_bits": 32
+}

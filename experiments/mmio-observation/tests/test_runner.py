@@ -147,6 +147,31 @@ class ProcessAndEvidenceTests(unittest.TestCase):
                             runner.validate_manifest(directory, manifest)
                         path.write_bytes(before)
 
+    def test_interrupted_requested_verification_remains_in_progress(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            directory = Path(temporary)
+            build_dir, output = directory / "build", directory / "results"
+            build_dir.mkdir()
+            (build_dir / "manifest.json").write_text(json.dumps({
+                "upstream_commit": build.UPSTREAM, "sources": {}, "binaries": [], "native_libraries": [],
+            }))
+            argv = ["run.py", "--build-dir", str(build_dir), "--output", str(output), "--pate", sys.executable]
+            with patch.object(sys, "argv", argv), \
+                    patch.object(runner.shutil, "which", return_value=sys.executable), \
+                    patch.object(runner, "version", return_value="test fixture version"), \
+                    patch.object(runner, "native_checks", return_value={"failed": 0}), \
+                    patch.object(runner, "powerpc_checks", return_value={"failed": 0}), \
+                    patch.object(runner, "pate_checks", side_effect=KeyboardInterrupt), \
+                    contextlib.redirect_stdout(io.StringIO()):
+                with self.assertRaises(KeyboardInterrupt):
+                    runner.main()
+            summary = json.loads((output / "summary.json").read_text())
+            self.assertEqual(summary["run_status"], "in_progress")
+            self.assertEqual(summary["pate"]["status"], "in_progress")
+            self.assertNotIn("No --pate executable supplied", str(summary["pate"]))
+            self.assertEqual(summary["native"]["failed"], 0)
+            self.assertEqual(summary["powerpc"]["failed"], 0)
+
     def test_final_evidence_hashes_cover_nested_pate_logs(self):
         with tempfile.TemporaryDirectory() as temporary:
             directory = Path(temporary)

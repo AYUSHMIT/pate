@@ -66,6 +66,10 @@ The omitted state still participates in symbolic execution and determines the
 second read. Excluding it from the observed trace does not remove its
 semantics.
 
+The flat-memory configuration also observes status, so its complete PATE trace
+includes a common initialization `W(status, seed)` before the oracle's
+read/read/output core. This common prefix does not change the comparison.
+
 The oracle's logical read/read/output trace and the C harness's output-only
 projection are different evidence. Native output/state checks do not validate
 physical load events. The flat-memory variant exercises ordinary memory reads
